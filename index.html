@@ -3,10 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Git With Me</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Learn Git With Me: Step-by-Step Git Workflow</h1>
+        <p>This guide will help you understand Git commands from the basics to linking your local Git repository with a GitHub remote repository.</p>
+    </header>
+
+    <main>
+        <section class="instructions">
+            <h2>Step-by-Step Guide to Git Commands</h2>
+
+            <h3>1. Install Git</h3>
+            <p>First, ensure Git is installed on your system. You can check by running the following command in your terminal:</p>
+            <pre><code>git --version</code></pre>
+            <p>If Git is not installed, visit <a href="https://git-scm.com/downloads" target="_blank">Git Downloads</a> to install it.</p>
+
+            <h3>2. Initialize a New Git Repository</h3>
+            <p>Navigate to the folder where you want to create a new project. Use the following command to initialize a Git repository:</p>
+            <pre><code>git init "your-project-name"</code></pre>
+            <p>This creates a new repository in the folder. Navigate into it using:</p>
+            <pre><code>cd your-project-name</code></pre>
+
+            <h3>3. Create Files</h3>
+            <p>Create the files you want to track. For example, create an HTML file using:</p>
+            <pre><code>touch index.html</code></pre>
+
+            <h3>4. Check the Status of Your Repository</h3>
+            <p>To check the status of your repository and see untracked changes (files Git is not tracking), use:</p>
+            <pre><code>git status</code></pre>
+
+            <h3>5. Stage Changes for Tracking</h3>
+            <p>Stage your changes so Git can start tracking them:</p>
+            <pre><code>git add index.html</code></pre>
+
+            <h3>6. Commit Changes</h3>
+            <p>Once the changes are staged, commit them with a message describing the changes:</p>
+            <pre><code>git commit -m "Create index.html"</code></pre>
+            <p>This creates a snapshot of the current state of your project.</p>
+
+            <h3>7. Create More Files and Track Changes</h3>
+            <p>You can now create additional files (e.g., a CSS file) and follow the same process to track and commit changes:</p>
+            <pre><code>touch style.css</code></pre>
+            <pre><code>git add style.css</code></pre>
+            <pre><code>git commit -m "Create style.css"</code></pre>
+
+            <h3>8. Create and Switch to a New Branch</h3>
+            <p>Branches allow you to work on different versions of your project without affecting the main branch. Create a new branch:</p>
+            <pre><code>git branch feature-branch</code></pre>
+            <p>Switch to the new branch:</p>
+            <pre><code>git checkout feature-branch</code></pre>
+
+            <h3>9. Link Your Local Git with a GitHub Repository</h3>
+            <p>Now, you can connect your local Git repository to a remote repository on GitHub to back up your code or collaborate with others.</p>
+
+            <h4>Steps to Link Your Repository:</h4>
+            <ol>
+                <li>Go to <a href="https://github.com" target="_blank">GitHub</a> and sign in or create a new account.</li>
+                <li>Create a new repository by clicking on the **New** button in the top-right corner.</li>
+                <li>Give the repository a name and click **Create repository**.</li>
+                <li>In your terminal, add the remote link to your local repository:
+                    <pre><code>git remote add origin https://github.com/your-username/your-repo-name.git</code></pre>
+                </li>
+                <li>Push your changes to the remote repository:
+                    <pre><code>git push -u origin master</code></pre>
+                </li>
+                <li>GitHub will now have a copy of your code in the repository, and you can collaborate with others or track changes remotely.</li>
+            </ol>
+
+            <h3>10. Push and Pull Changes</h3>
+            <p>Once your repository is linked with GitHub, you can push updates to it or pull changes from others.</p>
+            <p>Push changes using:</p>
+            <pre><code>git push origin master</code></pre>
+            <p>Pull the latest changes from GitHub (useful when working with others):</p>
+            <pre><code>git pull origin master</code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>By following these steps, you've set up a Git repository, tracked changes, and linked it with a GitHub remote repository. Keep practicing to get comfortable with Git commands!</p>
+    </footer>
 </body>
 </html>
